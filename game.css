@@ -1,0 +1,726 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    /* background-color: rgba(169, 169, 169, 0.531); */
+    margin: 0;
+    height: 100vh;
+    position: relative;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.nav-item:hover{
+    background-color: rgba(238, 181, 58, 0.721);
+}
+
+#games {
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    background-image: url("./Pictures/Landing-Page_cover.jpg");
+    background-size: 100% 100%;
+    
+}
+#games >h1 {
+    margin: auto;
+    width: fit-content;
+    height: 15%;
+    
+}
+.gamesBox {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(350px,1fr));
+    height: 85%;
+}
+.game__item {
+    height: 100%;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    align-self: center;;
+    
+    box-shadow: inset 0 0 10px #000000;
+}
+.game__item >p {
+    max-width: 100%;
+    font-size: 1.1rem;
+    margin-bottom: 6em;
+    font-weight:500;
+
+}
+.game__item--Imgbox{
+    height: 340px;
+    width: auto;
+    background-color: rgba(219, 171, 50, 0.782);
+    overflow: hidden;
+    margin: 1em;
+    
+}
+.game__item--ImgSrc{
+    max-height: 100%;
+    width: 100%;
+    transition: 
+    transform 750ms cubic-bezier(0.5,0,0.5,1),
+    opacity 250ms linear;
+
+}
+.game__item--ImgSrc:hover{
+    transform : scale(1.2);
+    opacity :0.75;
+    cursor: pointer;
+}
+.underline::after{
+    content: '';
+    display: block;
+    width: 2em;
+    height: 2px;
+    margin: 0.25em auto;
+    opacity: 0.75;
+    background-color: rgb(0, 0, 0);
+}
+#about{
+    background-image: url(./Pictures/About-Image.jpg);
+    background-size: 100% 100%;
+}
+.aboutUs_info{
+    background-color: rgba(255, 255, 255, 0.454);
+    border-radius: 25px;
+    box-shadow: 0 1em 1.2em 0.5em ;
+}
+.aboutUs_info_Parahgraph{
+    font-family: 'Source Code Pro', monospace;
+    max-width: 450px;
+    font-size: 1.4em;
+    margin: auto;
+}
+.About-me__bg-img{
+    width: auto;
+    max-height: 300px;
+    margin-left: 50px;
+    border-radius: 10px;
+    padding: 4px;
+   
+}
+.tohar{
+    box-shadow: -0.7em 1em 10px 1px rgb(82, 82, 82);
+
+}
+.shoval{
+    box-shadow: 1em 1em 10px 1px rgb(82, 82, 82);
+}
+
+@media (min-width:320px) and (max-width:480px){
+    .Welcome__bg-img{
+        min-height: 300px;
+    }
+}
+@media (min-width:481px) and (max-width:768px){
+    .Welcome__bg-img{
+        min-height: 350px;
+    }
+}
+@media (min-width:769px) and (max-width:1024px){
+    .Welcome__bg-img{
+        
+        min-height: 400px;
+    }
+}
+@media (min-width:1025px) and (max-width:1200px){
+    .Welcome__bg-img{
+        min-height: 500px;
+    }
+}
+@media (min-width:1201px) {
+    .Welcome__bg-img{
+        min-height: 600px;
+    }
+}
+
+
+.start__Box {
+    position: absolute;
+    width:100%;
+    height:75%;
+    background-color: rgba(255, 255, 255, 0.25);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+#start__Button {
+    z-index: 1000;
+    width:200px;
+    height: 60px;
+    background-color: rgb(20, 128, 20);
+    border-radius: 1em;
+    border: 0;
+    box-shadow: 0 0.5em 1em 0.4em;
+    font-size: 1.4em;
+    font-weight: bold;
+   
+}
+#start__Button:hover{
+    font-size: 1.5em;
+    box-shadow: 0 0.5em 1em 0.4em;
+    background-color: rgb(50, 168, 50);
+}
+
+.end__Box{
+    position: absolute;
+    z-index: 1000;
+    width:100%;
+    height:75%;
+    background-color: rgba(192, 102, 102, 0.25);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.end__Box >div{
+    width: 50%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+.end__Box >div>button{
+    width:62%;
+    height: 200%;
+    border-radius: 1em;
+    border: 0;
+    font-size: 1.4em;
+    font-weight: bold;
+    justify-self: center;
+}
+#gameEnds_restart{
+    background-color: rgb(23, 100, 23);
+    box-shadow: 0 0 1em 0.4em rgb(7, 175, 7);
+}
+#gameEnds_restart:hover{
+    background-color: rgb(37, 124, 37);
+}
+#gameEnds_home{
+    background-color: rgb(190, 165, 26);
+    box-shadow: 0 0 1em 0.4em yellow;
+}
+#gameEnds_home:hover{
+    background-color: rgb(205, 184, 71);
+}
+
+.our__navbar{
+    width: 100%;
+    height: 5%;
+    background-color: rgb(178, 200, 102);
+    position: relative;
+   
+}
+.our__navbar>ul{
+    margin: 0;
+    display: flex;
+}
+.our__navbar>ul>li{
+    list-style-type: none;
+    margin: 0 1em;
+    font-weight: bold;
+    font-size: 1.2em;
+    padding: 0.75em;
+}
+.our__navbar>ul>li:hover{
+    background-color: rgba(104, 144, 73, 0.577);
+}
+.our__navbar>button{
+    display: none;
+    position: absolute;
+    height: 170%;
+    width: 5%;
+    background-color: transparent;
+    border: 0;
+    background-image: url(./Pictures/Bird-Reset.png);
+    background-size: 100% 100%;
+    right: 5%;
+    top:10px;
+}
+.our__navbar>ul>li>a{
+    text-decoration: none;
+    color: black;
+   
+}
+#resetButton{
+    
+    cursor: pointer;
+}
+
+#answer__zone{
+    display: flex;
+    width: 100%;
+    height: 70%;
+    background-image: url(./Pictures/Birds-On-a-Wire/Birds-Forest.jpg);
+    background-repeat: none;
+    background-size :100% 100%;
+    background-repeat: no-repeat;
+}
+.answer__zone--trees{
+    width: 15%;
+    height: 100%;
+}
+#answer__zone--ropes{
+    width: 70%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+}
+.answer__zone--rope {
+    width: 100%;
+    height: 100%;
+    position: relative;
+
+}
+.answer__zone--rope>div {
+    width: 100%;
+    height: 30%;
+    position: absolute;
+   
+}
+.ropes__glow{
+    box-shadow: 0 0 3em rgb(139, 199, 56);
+}
+#answer__zone--rope1{
+    bottom: 0;
+}
+#answer__zone--rope2{
+    top :30%;
+    position: relative;
+}
+#answer__zone--rope3{
+    top:0  ;
+    position: relative;
+}
+#answer__zone--birds{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+#answer__zone--selectBird{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    height: 60%;
+}
+.answer__zone--Bird{
+    justify-self: center;
+    width: 70%;
+    height: 100%;
+    background-size: 100% 100%;
+}
+.purple{
+    background-image: url(./Pictures/Birds-On-a-Wire/Birds-Set/Bird-Purpule-Side-WB.png);
+}
+.Orange{
+    background-image: url(./Pictures/Birds-On-a-Wire/Birds-Set/Bird-Orange-Side-WB.png);
+}
+.red{
+    background-image: url(./Pictures/Birds-On-a-Wire/Birds-Set/Bird-Red-Side-WB.png);
+}
+
+
+
+#question__zone{
+    width: 100vw;
+    height: 25%;
+    display: flex;
+    box-shadow: 0px -15px 20px 5px rgba(151, 114, 46, 0.845);
+    background-color: rgba(165, 164, 164, 0.382);
+    padding: 1em 1.2em 0 1.2em;
+
+    background-image: url(./Pictures/Birds-On-a-Wire/Bird-Q.png);
+    background-size: 100% 100%;
+}
+.question__zone--right{
+    margin-top: -16px;
+    width: 70%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+#question__zone--Q{
+    width: 75%;
+    height: 80%;
+    margin: 0;
+    padding: 1.2em;
+    font-size: 2.5em;
+}
+.question__zone--Left{
+    width: 30%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+#question__zone--tries{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    height: 20%;
+    width: 35%;
+    margin-left: 3em;
+    margin-top: 0.5em;
+    border-radius: 0.5em;
+}
+#question__zone--tries>img{
+    height: 50px;
+    width: 50px;
+
+}
+.question__zone--done{
+    position: relative;
+    left: 15%;
+    width: 45%;
+    height: 80%;
+
+}
+#question__zone--done{
+    position: absolute;
+    top:40%;
+    left:35%;
+    transform: rotate(-4deg);
+    height: 20%;
+    max-width: 70%;
+    background-color: transparent;
+    border: 0;
+    font-size: 1.2em;
+    font-weight: bold;
+}    
+#question__zone--done:hover{
+
+    background-color: rgba(139, 197, 112, 0.475);
+    border-radius: 10%;
+    transition: scale(1.2em);
+    cursor: pointer;
+}
+.birdOnRope{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top:-80%;
+}
+.selectedBird{
+    width: 100px;
+}
+
+
+@media (max-width:600px){
+    #start__Button {
+        width:34%;
+        height: 8%;
+    }
+    #gameEnds_restart,#gameEnds_home
+    {
+        font-size: 1em;
+    }
+    #answer__zone{
+        display: flex;
+        width: 100%;
+        height: 62%;
+    }
+    #question__zone{
+        position: relative;
+        height: 30%;
+    }
+    #question__zone--done{
+        position: absolute;
+        font-size: 0.75em;
+        max-width: 100%;
+        height: 35%;
+        left: -3%;
+        top:32%;
+        transform: rotate(-10deg);
+    }
+    #question__zone--Q{
+        position: absolute;
+        font-size: 1.1em;
+        top:23%;
+        height: 30%;
+        max-width: 50%;
+    }
+    #question__zone--tries{
+        height: 20%;
+        width: 35%;
+        margin-left: 1em;
+        margin-top: 0.5em;
+        border-radius: 0.5em;
+    }
+    #question__zone--tries>img{
+        height: 25px;
+        width: 25px;
+    
+    }
+}
+@media (min-width:601px) and (max-width:800px){
+    .end__Box{
+        height:81%;
+    }
+    #gameEnds_restart,#gameEnds_home
+    {
+        font-size: 1em;
+    }
+    #question__zone--done{
+        font-size: 1em;
+        left: 18%;
+        top:34%;
+        transform: rotate(-6deg);
+    }
+    #question__zone--Q{
+        font-size: 1.5em;
+        max-width: 60%;
+        padding: 8% 2%;
+    }
+    #question__zone--tries{
+        height: 20%;
+        width: 55%;
+        margin-left: 0.25em;
+        margin-top: 0.5em;
+        border-radius: 0.5em;
+    }
+    #question__zone--tries>img{
+        height: 30px;
+        width: 30px;
+    
+    }
+    .answer__zone--Bird{
+        width: 60%;
+        height: 100%;
+    }
+
+}
+@media (min-width:801px) and (max-width:1200px){
+    #question__zone--done{
+        font-size: 1em;
+        left: 22%;
+        top:38%;  
+    }
+    #question__zone--Q{
+        font-size: 1.5em;
+        max-width: 60%;
+        padding-top: 6%;
+    }
+    #question__zone--tries{
+        width: 40%;
+        margin-left: 1.25em;
+    }
+    #question__zone--tries>img{
+        height: 35px;
+        width: 35px;
+    
+    }
+    .answer__zone--Bird{
+        width: 60%;
+        height: 100%;
+    }
+
+}
+@media (max-width:1400px){
+    #question__zone--done{
+        font-size: 1em;
+        left: 22%;
+        top:38%;  
+    }
+    #question__zone--Q{
+        font-size: 1.5em;
+        max-width: 60%;
+        padding-top: 6%;
+    }
+    #question__zone--tries{
+        width: 40%;
+        margin-left: 1.25em;
+    }
+    #question__zone--tries>img{
+        height: 35px;
+        width: 35px;
+    
+    }
+    .answer__zone--Bird{
+        width: 60%;
+        height: 100%;
+    }
+
+    .our__navbar{
+        display: flex;
+        height: 8%;
+        justify-content: flex-start;
+        align-items: center;
+
+    }
+    .our__navbar>ul{
+        width: 100%;
+        padding: 0 1%;
+    }
+    .our__navbar>ul>li{
+        margin: 0;
+        font-size: 0.95em;
+        padding: 0.5em;
+    }
+    .our__navbar>button{
+
+        height: 40%;
+        width: 5%;
+        top:23px;
+
+    }
+    #answer__zone--selectBird{
+        width: 50%;
+        height: 40%;
+    }
+    .answer__zone--Bird{
+        width: 65%;
+        height: 95%;
+        background-size: 100% 100%;
+    }
+}
+
+
+/* Bear Eating */
+.our__navbar--Bears{
+    background-image: url(./Pictures/Bears-Eating/Bears-Eating-Forest-extn.png);
+    background-size: 100% 100%;
+}
+#game__zone{
+    height: 95%;
+    background-image: url(./Pictures/Bears-Eating/Bears-Eating-Forest.png);
+    background-size: 100% 100%;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.bears{
+    width: 90%;
+    height: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-end;
+}
+.bear__box--outer{
+    width: 30%;
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+.bear__box--inner{
+    width: 40%;
+    height: 20%;
+    margin-top: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 0.75em;
+}
+
+#mama_Bear> .bear__box--inner{
+    margin-right: 4em;
+}
+#papa_Bear{
+    background-image: url(./Pictures/Bears-Eating/Papa-Bear.png);
+    background-size: 100% 100%;
+}
+#mama_Bear{
+    background-image: url(./Pictures/Bears-Eating/Mama-Bear.png);
+    background-size: 100% 100%;
+}
+.bear__select{
+    width: 80%;
+    height: 50%;
+    text-align: center;
+    background-color: beige;
+    border: 1px solid transparent;
+    border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+    cursor: pointer;
+    user-select: none;
+}
+.bears__operation{
+    width: 10%;
+    margin-bottom: 4%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.bears__operation>input{
+    margin: 1.5em;
+}
+.bears__operation>label{
+    border-radius: 10%;
+    background-color: rgba(34, 131, 164, 0.588);
+    font-size: 3em;
+    border: none;
+    box-shadow: 0 0 3px 3px lightblue;
+    color: lightblue;
+    width: 50%;
+    text-align: center;
+
+}
+
+
+
+.bears__Equal{
+    width: 10%;
+    height: 43%;
+}
+
+#bears__Equal_Button{
+    width: 80%;
+    height: 35%;
+    background-color: rgba(34, 131, 164, 0.588);
+    font-size: 1em;
+    border-radius: 100%;
+    border: none;
+    box-shadow: 0 0 3px 3px lightblue;
+    color: lightblue;
+}
+#bears__Answer{
+    width: 20%;
+    height: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5%;
+    
+}
+#bears__Answer--icon{
+    /* background-image: url(./Pictures/Bears-Eating/Bear-X-icon.png); */
+    background-size: 100% 100%;
+    width: 40%;
+    height: 30%;
+}
+
+
+.bears__Question--zone{
+    width: 50%;
+    margin: auto;
+    height: 30%;
+    background-color: rgba(34, 131, 164, 0.588);
+    box-shadow: 0 0 3px 3px lightblue;
+    color: lightblue;
+    padding: 1em 3em;
+}
+
+#bears__Question{
+    padding-top: 1.5em;
+    font-size: 2em;
+    max-width: 100%;
+    margin: auto;
+    
+}

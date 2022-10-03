@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../game.css">
+    <title>Document</title>
+</head>
+<body>
+
+   <nav class="our__navbar our__navbar--Bears">
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="..//Birds-on-a-wire/Birds-on-a-wire.html">Birds-on-a-wire</a></li>
+                <li><a href="../Floating-Fish/Floating-Fish.html">Floating Fish</a></li>
+            </ul>
+    </nav>
+    <div id="game__zone">
+        <div class="bears">
+            <div class="bear__box--outer" id="mama_Bear">     
+                <div class="bear__box--inner"  >
+                    <select class="bear__select" id="mama_Bear--select">
+                    </select>
+                </div>
+            </div>
+
+            <div class="bears__operation">
+                <label for="plus">+</label>
+                <input checked type="radio" id="plus" name="fav_language" value="HTML">
+                <label for="minus">-</label><br>
+                <input type="radio" id="minus" name="fav_language" value="CSS">
+            </div>
+
+            <div class="bear__box--outer" id="papa_Bear">     
+                <div class="bear__box--inner"  >
+                    <select class="bear__select" id="papa_Bear--select">
+                    </select>
+                </div>
+            </div>
+
+            <div class="bears__Equal">
+                <button id="bears__Equal_Button">Did I get it right?<br>  = </button>
+            </div>
+
+            <div id="bears__Answer" >     
+                <div class="bear__box--inner" >
+                    <select class="bear__select" id="bears_Answer"> </select>
+                </div>
+            </div>
+        </div>
+        <div class="bears__Question--zone">
+            <p id="bears__Question"></p>
+
+        </div>
+    </div>
+
+
+   
+    
+
+    
+    <script  src="./Bears-Eating.js""></script>
+</body>
+</html>
